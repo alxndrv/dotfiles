@@ -16,8 +16,11 @@ dotfiles:
     src: rofi/menu.rasi
     dst: ~/.config/rofi/menu.rasi
   d_functions:
-    src: dotfiles/fish/functions
+    src: fish/functions
     dst: ~/.config/fish/functions
+  f_fish_config:
+    src: fish/config.fish
+    dst: ~/.config/fish/config.fish
 profiles:
   home:
     dotfiles:
@@ -26,3 +29,4 @@ profiles:
     - f_i3blocks_config
     - f_rofi_config
     - d_functions
+    - f_fish_config
