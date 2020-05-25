@@ -1,7 +1,7 @@
 config:
   backup: true
   create: true
-  dotpath: .
+  dotpath: dotfiles
 dotfiles:
   f_alacritty_config:
     src: alacritty/alacritty.yml
@@ -15,6 +15,9 @@ dotfiles:
   f_rofi_config:
     src: rofi/menu.rasi
     dst: ~/.config/rofi/menu.rasi
+  d_functions:
+    src: dotfiles/fish/functions
+    dst: ~/.config/fish/functions
 profiles:
   home:
     dotfiles:
@@ -22,3 +25,4 @@ profiles:
     - f_i3_config
     - f_i3blocks_config
     - f_rofi_config
+    - d_functions
