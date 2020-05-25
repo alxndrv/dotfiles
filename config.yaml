@@ -1,0 +1,24 @@
+config:
+  backup: true
+  create: true
+  dotpath: .
+dotfiles:
+  f_alacritty_config:
+    src: alacritty/alacritty.yml
+    dst: ~/.config/alacritty/alacritty.yml
+  f_i3_config:
+    src: i3/config
+    dst: ~/.config/i3/config
+  f_i3blocks_config:
+    src: i3blocks/config
+    dst: ~/.config/i3blocks/config
+  f_rofi_config:
+    src: rofi/menu.rasi
+    dst: ~/.config/rofi/menu.rasi
+profiles:
+  home:
+    dotfiles:
+    - f_alacritty_config
+    - f_i3_config
+    - f_i3blocks_config
+    - f_rofi_config
