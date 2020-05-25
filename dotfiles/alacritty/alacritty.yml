@@ -49,11 +49,6 @@ window:
 scrolling:
   multiplier: 1
 
-  # Scroll to the bottom when new text is written to the terminal.
-  auto_scroll: false
-
-tabspaces: 4
-
 # Font configuration
 #font:
   # Normal (roman) font face
