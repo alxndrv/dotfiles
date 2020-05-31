@@ -21,6 +21,12 @@ dotfiles:
   f_fish_config:
     src: fish/config.fish
     dst: ~/.config/fish/config.fish
+  f_bspwmrc:
+    src: bspwm/bspwmrc
+    dst: ~/.config/bspwm/bspwmrc
+  f_sxhkdrc:
+    src: sxhkd/sxhkdrc
+    dst: ~/.config/sxhkd/sxhkdrc
 profiles:
   home:
     dotfiles:
@@ -30,3 +36,5 @@ profiles:
     - f_rofi_config
     - d_functions
     - f_fish_config
+    - f_bspwmrc
+    - f_sxhkdrc

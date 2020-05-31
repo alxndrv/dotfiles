@@ -1,0 +1,49 @@
+#
+# Global keybindings
+#
+
+# Open terminal
+super + Return
+      alacritty
+
+# Run rofi/dmenu
+super + d
+      rofi -show run
+
+# Reload sxhkd config
+super + Escape
+      pkill -USR1 -x sxhkd
+
+
+#
+# BSPWM keybinds
+#
+
+# quit/restart bspwm
+super + shift + {q,r}
+      bspc {quit,wm -r}
+
+# close/kill window
+super + {_,shift +}c
+      bspc node -{c,k}
+
+# alternate layouts
+super + m
+      bspc desktop -l next
+
+# swap current node with biggest node
+super + g
+      bspc node -s biggest
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} focused:'^{1-9,10}'
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
