@@ -30,3 +30,5 @@ set -U fish_pager_color_prefix cyan --underline
 set -U fish_pager_color_progress brwhite --background=cyan
 
 export EDITOR='vim'
+
+set -U SXHKD_SHELL /usr/bin/bash
