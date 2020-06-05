@@ -1,3 +1,3 @@
 function cfed
-    find ~/.config | fzf | xargs -o $EDITOR 
+    find $XDG_CONFIG_HOME -type d \( -path "$XDG_CONFIG_HOME/yarn/**" -o -path "$XDG_CONFIG_HOME/Microsoft**" \) -prune -o -type f -print | fzf | xargs -o $EDITOR 
 end
