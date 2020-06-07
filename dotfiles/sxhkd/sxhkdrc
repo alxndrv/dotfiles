@@ -28,9 +28,9 @@ XF86AudioPlay
 # BSPWM keybinds
 #
 
-# quit/restart bspwm
-super + shift + {q,r}
-      bspc {quit,wm -r}
+# restart bspwm
+super + shift + r
+      bspc wm -r}
 
 # close/kill window
 super + {_,shift +}c
