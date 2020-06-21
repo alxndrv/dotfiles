@@ -30,6 +30,9 @@ dotfiles:
   d_polybar:
     src: polybar
     dst: ~/.config/polybar
+  d_scripts:
+    src: scripts
+    dst: ~/.scripts
 profiles:
   home:
     dotfiles:
@@ -42,3 +45,4 @@ profiles:
     - f_bspwmrc
     - f_sxhkdrc
     - d_polybar
+    - d_scripts
