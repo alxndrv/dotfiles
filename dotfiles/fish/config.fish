@@ -31,5 +31,8 @@ set -U fish_pager_color_progress brwhite --background=cyan
 
 export EDITOR='vim'
 
+set -U fish_user_paths ~/.local/bin
 set -U SXHKD_SHELL /usr/bin/bash
 set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+
+alias ytdla="youtube-dl --add-metadata -i -x -f bestaudio/best"
