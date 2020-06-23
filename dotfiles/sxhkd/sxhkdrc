@@ -30,7 +30,7 @@ XF86AudioPlay
 
 # restart bspwm
 super + shift + r
-      bspc wm -r}
+      bspc wm -r
 
 # close/kill window
 super + {_,shift +}c
