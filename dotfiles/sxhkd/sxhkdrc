@@ -19,7 +19,7 @@ XF86AudioNext
       playerctl next
 
 XF86AudioPrev
-      playerctl next
+      playerctl prev
 
 XF86AudioPlay
       playerctl play-pause
