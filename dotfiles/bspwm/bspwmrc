@@ -4,6 +4,7 @@
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 sxhkd &
 ibus-daemon --xim -d -r &
+xfce4-power-manager &
 nm-applet &
 nitrogen --restore &
 ~/.config/polybar/launch.sh &
