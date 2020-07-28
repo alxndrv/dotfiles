@@ -36,3 +36,6 @@ set -U SXHKD_SHELL /usr/bin/bash
 set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
 
 alias ytdla="youtube-dl --add-metadata -i -x -f bestaudio/best"
+
+
+source ~/.config/fish/local.fish
