@@ -7,6 +7,7 @@ ibus-daemon --xim -d -r &
 xfce4-power-manager &
 nm-applet &
 nitrogen --restore &
+wal -R
 ~/.config/polybar/launch.sh &
 
 ### MONITORS ###
