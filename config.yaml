@@ -27,6 +27,9 @@ dotfiles:
   f_sxhkdrc:
     src: sxhkd/sxhkdrc
     dst: ~/.config/sxhkd/sxhkdrc
+  f_picom:
+    src: picom/picom.conf
+    dst: ~/.config/picom/picom.conf
   d_polybar:
     src: polybar
     dst: ~/.config/polybar
@@ -44,5 +47,6 @@ profiles:
     - f_fish_config
     - f_bspwmrc
     - f_sxhkdrc
+    - f_picom
     - d_polybar
     - d_scripts
