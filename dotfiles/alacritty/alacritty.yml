@@ -18,6 +18,12 @@ window:
     x: 0
     y: 0
 
+  visual_bell:
+    animation: EaseOutExpo
+    duration: 0
+    
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
 
   # Startup Mode (changes require restart)
   #
@@ -161,12 +167,6 @@ colors:
     cyan:    '0x9aedfe'
     white:   '0xe6e6e6'
 
-# Visual Bell
-
-visual_bell:
-  animation: EaseOutExpo
-  duration: 0
-
 # Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
@@ -179,8 +179,6 @@ selection:
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
 
-# Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
 
 cursor:
   style: Block
