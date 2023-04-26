@@ -31,9 +31,13 @@ set -U fish_pager_color_progress brwhite --background=cyan
 
 export EDITOR='vim'
 
-set -U fish_user_paths ~/.local/bin (ls -d ~/.scripts/chapter-split)
 set -U SXHKD_SHELL /usr/bin/bash
 set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+
+alias tf="terraform"
+alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
 
 alias ytdla="youtube-dl --add-metadata -i -x -f bestaudio/best"
 alias cgit="git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME"
