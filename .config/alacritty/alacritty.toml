@@ -46,8 +46,8 @@ decorations = "full"
 dynamic_title = true
 
 [window.dimensions]
-columns = 0
-lines = 0
+columns = 160
+lines = 40
 
 [window.padding]
 x = 0
