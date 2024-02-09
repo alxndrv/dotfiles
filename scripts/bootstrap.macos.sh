@@ -24,6 +24,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
 # Disable all hot-corners
 defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-br-corner -int 0
