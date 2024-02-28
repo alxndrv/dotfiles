@@ -39,6 +39,8 @@ alias k="kubectl"
 alias kctx="kubectx"
 alias kns="kubens"
 
+alias vim="nvim"
+
 alias ytdla="youtube-dl --add-metadata -i -x -f bestaudio/best"
 alias cgit="git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME"
 
