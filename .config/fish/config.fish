@@ -29,7 +29,7 @@ set -U fish_pager_color_description B3A06D
 set -U fish_pager_color_prefix cyan --underline
 set -U fish_pager_color_progress brwhite --background=cyan
 
-export EDITOR='vim'
+export EDITOR='nvim'
 
 set -U SXHKD_SHELL /usr/bin/bash
 set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
