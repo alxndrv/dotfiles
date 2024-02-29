@@ -17,6 +17,16 @@ return {
 			require("lazy.core.loader").add_to_rtp(plugin)
 			require("nvim-treesitter.query_predicates")
 		end,
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				ensure_installed = { "lua", "vim", "json", "toml", "yaml" },
+				ignore_install = {}, -- List of parsers to ignore installing
+				highlight = {
+					enable = true, -- false will disable the whole extension
+					disable = { "help" }, -- list of language that will be disabled
+				},
+			})
+		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
@@ -32,5 +42,13 @@ return {
 		config = function()
 			require("nvim-surround").setup()
 		end,
+	},
+	"nvim-lua/plenary.nvim",
+	{
+		"nvim-telescope/telescope.nvim",
+		cmd = "Telescope",
+		dependencies = {
+			"nvim-telescope/telescope-symbols.nvim",
+		},
 	},
 }
