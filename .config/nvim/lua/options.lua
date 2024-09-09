@@ -1,3 +1,6 @@
+-- General
+vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
+
 -- Tab stuff
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -12,4 +15,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- Searching
+vim.opt.incsearch = true
 vim.opt.hlsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
