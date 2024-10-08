@@ -32,7 +32,6 @@ setopt hist_find_no_dups
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-zinit snippet OMZP::zoxide
 
 # Configure completions
 autoload -U compinit && compinit
@@ -45,6 +44,9 @@ source "${HOME}/.config/shell/aliases"
 # Load local configuration, if exists
 [ -f "$HOME/.config/shell/local.sh" ] && source "$HOME/.config/zsh/local.sh"
 [ -f "$HOME/.config/zsh/local.zsh" ] && source "$HOME/.config/zsh/local.zsh"
+
+# Depends on zoxide being installed and in PATH
+zinit snippet OMZP::zoxide
 
 # Integrations
 eval "$(fzf --zsh)"
