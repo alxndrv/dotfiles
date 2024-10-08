@@ -6,7 +6,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Set prompt
 autoload -U colors && colors	# Load colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}%{$fg[blue]%}:%{$fg[magenta]%}%~/%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[green]%}%{$fg[red]%}:%{$fg[blue]%}%~/%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Keybindings
 bindkey -e
@@ -41,9 +41,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLOURS}"
 # Source aliases
 source "${HOME}/.config/shell/aliases"
 
-# Integrations
-eval "$(fzf --zsh)"
-
 # Load local configuration, if exists
 [ -f "$HOME/.config/shell/local.sh" ] && source "$HOME/.config/zsh/local.sh"
 [ -f "$HOME/.config/zsh/local.zsh" ] && source "$HOME/.config/zsh/local.zsh"
+
+# Integrations
+eval "$(fzf --zsh)"
