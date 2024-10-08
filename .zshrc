@@ -32,6 +32,7 @@ setopt hist_find_no_dups
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+zinit snippet OMZP::zoxide
 
 # Configure completions
 autoload -U compinit && compinit
