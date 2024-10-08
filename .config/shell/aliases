@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Basics
+alias ls="ls --color=auto"
+alias ll="ls -lh --color=auto"
+alias la="ls -lha --color=auto"
+
+
+# Tools
+alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
+alias tf="terraform"
+alias vim="nvim"
