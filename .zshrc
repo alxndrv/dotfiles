@@ -12,8 +12,8 @@ PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[green]%}%{$fg[red]%}:%{$fg[blue]%}%~/%
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^[[A' history-search-backward
-bindkey '^n' history-search-backward
-bindkey '^[[B' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^[[B' history-search-forward
 
 # History
 HISTFILE=~/.zsh_history
