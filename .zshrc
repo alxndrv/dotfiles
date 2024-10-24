@@ -48,6 +48,7 @@ source "${HOME}/.config/shell/aliases"
 
 # Depends on zoxide being installed and in PATH
 zinit snippet OMZP::zoxide
+alias cd=z
 
 # Load kubectl completions if installed
 command -v kubectl 2>&1 >/dev/null && eval "$(kubectl completion zsh)"
