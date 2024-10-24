@@ -4,10 +4,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Set prompt
-autoload -U colors && colors	# Load colors
-PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[green]%}%{$fg[red]%}:%{$fg[blue]%}%~/%{$fg[red]%}]%{$reset_color%}$%b "
-
 # Keybindings
 bindkey -e
 bindkey '^p' history-search-backward
@@ -33,11 +29,17 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light Aloxaf/fzf-tab
+zinit snippet OMZP::shrink-path
 
 # Configure completions
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLOURS}"
+
+# Set prompt
+autoload -U colors && colors	# Load colors
+setopt prompt_subst
+PS1='%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[green]%}%{$fg[red]%}:%{$fg[blue]%}$(shrink_path -f)/%{$fg[red]%}]%{$reset_color%}$%b '
 
 # Source aliases
 source "${HOME}/.config/shell/aliases"
