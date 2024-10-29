@@ -14,6 +14,10 @@ sudo -v
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Mouse: disable acceleration and set pointer speed
+defaults write NSGlobalDomain com.apple.mouse.linear -int 1
+defaults write NSGlobalDomain com.apple.mouse.scaling -int 1
+
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 

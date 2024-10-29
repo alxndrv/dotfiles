@@ -57,3 +57,6 @@ command -v kubectl 2>&1 >/dev/null && eval "$(kubectl completion zsh)"
 
 # Integrations
 eval "$(fzf --zsh)"
+
+# Set editor
+export EDITOR=nvim
