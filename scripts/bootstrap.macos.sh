@@ -36,7 +36,7 @@ defaults write com.apple.dock launchanim -bool false
 defaults write -g NSWindowResizeTime -float 0.001
 defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock autohide-time-modifier -float 0
-defaults write com.apple.universalaccess reduceMotion -bool true
+#defaults write com.apple.universalaccess reduceMotion -bool true
 defaults write com.apple.Accessibility ReduceMotionEnabled -bool true
 
 # Disable all hot-corners
@@ -61,11 +61,17 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
+# Menubar, hide icons I don't care about
+defaults write com.apple.controlcenter "NSStatusItem Visible FocusModes" -int 0
+defaults write com.apple.controlcenter "NSStatusItem Visible KeyboardBrightness" -bool false
+defaults delete com.apple.Spotlight "NSStatusItem Visible Item-0"
+
 ###--------------------------------------------------###
 
 for app in "cfprefsd" \
   "Dock" \
   "Finder" \
+  "ControlCenter" \
   "SystemUIServer"; do
   killall "${app}" &> /dev/null
 done
