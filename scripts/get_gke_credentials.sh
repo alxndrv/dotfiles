@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PROJECT=$(gcloud projects list --format "value(name)" | gum choose --header="Choose a project:")
+PROJECT=$(gcloud projects list --format "value(project_id)" | gum choose --header="Choose a project:")
 
 CLUSTER=$(gcloud container clusters list --project $PROJECT --format "value(name, location)" | gum choose --header "Choose a cluster:")
 
