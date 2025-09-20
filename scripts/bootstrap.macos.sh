@@ -64,7 +64,7 @@ defaults write com.apple.menuextra.battery ShowTime -string "NO"
 # Menubar, hide icons I don't care about
 defaults write com.apple.controlcenter "NSStatusItem Visible FocusModes" -int 0
 defaults write com.apple.controlcenter "NSStatusItem Visible KeyboardBrightness" -bool false
-defaults delete com.apple.Spotlight "NSStatusItem Visible Item-0"
+defaults write com.apple.Spotlight "NSStatusItem VisibleCC Item-0" -bool false
 
 ###--------------------------------------------------###
 
