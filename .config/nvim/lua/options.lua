@@ -1,6 +1,9 @@
 -- General
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 
+-- Remove underscore (_) from the list of WORD characters
+vim.cmd(":set iskeyword-=_")
+
 -- Tab stuff
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
