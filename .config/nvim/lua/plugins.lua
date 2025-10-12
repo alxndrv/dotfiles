@@ -1,5 +1,11 @@
 return {
 	{
+		"rebelot/kanagawa.nvim",
+		config = function()
+			vim.cmd("colorscheme kanagawa-wave")
+		end,
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		version = false, -- last release is way too old
 		event = "InsertEnter",
@@ -19,7 +25,7 @@ return {
 		end,
 		config = function()
 			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "lua", "vim", "json", "toml", "yaml" },
+				ensure_installed = { "lua", "vim", "json", "toml", "yaml", "python" },
 				ignore_install = {}, -- List of parsers to ignore installing
 				highlight = {
 					enable = true, -- false will disable the whole extension

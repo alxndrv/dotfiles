@@ -10,7 +10,7 @@ vim.opt.expandtab = true
 -- UI config
 vim.opt.number = true
 vim.opt.relativenumber = false
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
