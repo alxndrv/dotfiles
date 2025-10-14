@@ -57,6 +57,9 @@ defaults write com.apple.dock launchanim -bool false
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Save screenshots in ~/Screenshots instead of on the Desktop
+defaults write com.apple.screencapture location "~/Screenshots"
+
 # Hide remaining battery time; show percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
