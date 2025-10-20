@@ -24,6 +24,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Finder: new windows open Home directory instead of Recents
+defaults write com.apple.Finder NewWindowTarget "PfHm"
+
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
@@ -51,6 +54,9 @@ defaults write com.apple.dock tilesize -int 28
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Don't show Recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
@@ -60,9 +66,17 @@ defaults write com.apple.dock mru-spaces -bool false
 # Save screenshots in ~/Screenshots instead of on the Desktop
 defaults write com.apple.screencapture location "~/Screenshots"
 
+# Set key repeat rate
+# ⚠️ This needs a restart... Or just change it in System Settings :(
+defaults write NSGlobalDomain KeyRepeat -int 2
+
 # Hide remaining battery time; show percentage
+# ⚠️ This doesn't seem to do anything and seems to require a manual toggle in the menubar
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
+
+# Show seconds in Clock
+defaults write "com.apple.menuextra.clock" ShowSeconds -int 1
 
 # Menubar, hide icons I don't care about
 defaults write com.apple.controlcenter "NSStatusItem Visible FocusModes" -int 0
@@ -75,6 +89,7 @@ for app in "cfprefsd" \
   "Dock" \
   "Finder" \
   "ControlCenter" \
+  "System Preferences" \
   "SystemUIServer"; do
   killall "${app}" &> /dev/null
 done
